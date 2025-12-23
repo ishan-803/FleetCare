@@ -9,7 +9,7 @@ const ServiceHistorySchema = new mongoose.Schema({
   dueServiceDate: { type: Date, default: null },
   paymentStatus: { type: String, enum: ['Paid', 'Unpaid'], default: 'Unpaid' },
   cost: { type: Number, default: 0 },
-  workStatus: { type: String, enum: ['Completed', 'Work In Progress', 'Pending'], required: true }
+  workStatus: { type: String, enum: ['Completed','Pending'], required: true }
 }, { timestamps: true });
  
 module.exports = mongoose.model('History', ServiceHistorySchema);

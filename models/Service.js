@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const ServiceAssignmentSchema = new mongoose.Schema({
   vehicleVIN: { type: String, required: true, index: true },
   serviceType: { type: String, required: true, index: true },
-  description: { type: String, default: '' },
   dueServiceDate: { type: Date, default: null },
   technicianId: { type: mongoose.Schema.Types.ObjectId, ref: 'TechnicianRegister', default: null },
   technicianName: { type: String, default: null },
