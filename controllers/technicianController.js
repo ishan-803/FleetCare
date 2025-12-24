@@ -18,6 +18,8 @@ exports.getUnassignedServices = async (req, res, next) => {
   }
 };
 
+// can be refactored using a helper function as common logic present
+// in both this and schedule service controller
 // POST /api/technician/assignments
 exports.createAssignment = async (req, res, next) => {
   try {
